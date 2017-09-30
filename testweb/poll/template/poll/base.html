@@ -1,0 +1,99 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block tile %}{% endblock %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.9">
+	<link rel="stylesheet" type="text/css" href="{% static 'poll/css/w3.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'poll/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'poll/css/bootstrap-theme.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'poll/css/main.css' %}">
+
+</head>
+<body>
+	<header>
+		<div><br><br><br></div>
+	    <div class="container">
+		    <div class="w3-top ">
+		    	<div class="w3-bar w3-blue w3-border ">
+		    		<a href="http://127.0.0.1:8000/polls/main/" class="w3-bar-item w3-buttom w3-mobile w3-border  w3-green">Principal</a>
+		    		<a href="who.html" class="w3-bar-item w3-buttom w3-mobile w3-border">¿Quienes Somos?</a>
+		    		<a href="#" class="w3-bar-item w3-buttom w3-mobile w3-border">¿Como Transformar a Ocumare?</a>
+		    		<a href="#" class="w3-bar-item w3-buttom w3-mobile w3-border">Contactanos</a>
+		    		<a href="#" class="w3-bar-item w3-buttom w3-mobile w3-border">Unete a Nosotros</a>	    			    	
+		    	</div>
+		    </div>
+	    </div>		
+		<div class="container up">
+			<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                <img src="{% static 'poll/images/portada/PRP.jpg' %}" style="width:150%"> 
+                <!--<img id="logo_img" style="width:150%"> -->
+                <br>
+                <br>
+				<p id="logo_foot"></p>
+			</div>
+		    <div class="main_title col-xs-12 col-sm-6 col-md-7 col-lg-7 ">
+		    	<p id="web_name_1"></p>
+		    	<p id="web_name_2">_</p>
+		    	<p id="web_name_3"></p>
+		    </div>
+		    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 w3-border w3-round-xlarge">
+		    	<br>
+		    		<p id="lema"></p>
+		    	<br>
+		    </div>
+	</header>
+	<div class="container down w3-container">
+		<div class="w3-padding-16"></div>
+		<div class="w3-threequarter "> <!-- Aqui va la barra central -->
+			{% block content_11 %}{% endblock %}
+			{% block content_12 %}{% endblock %}
+			{% block content_21 %}{% endblock %}
+			{% block content_22 %}{% endblock %}
+			{% block content_31 %}{% endblock %}
+			{% block content_32 %}{% endblock %}
+			{% block content_final %}{% endblock %}
+		</div>
+	
+		<div class="w3-quarter "> <!-- Aqui va la barra lateral -->
+				<h3 class=" w3-margin w3-green"> Siguenos en las Redes</h3>
+				<div class="w3-margin">
+					<img src="{% static 'poll/images/portada/face.png' %}"><a href="https://www.facebook.com/movimiento.prp"> Movimiento Prp</a>
+				</div>
+
+				<div class="w3-margin">
+					<img src="{% static 'poll/images/portada/twitter.png' %}"><a href="https://twitter.com/Movimiento_PRP"> @Movimiento_prp</a>
+				</div>
+
+				<div class="w3-margin">
+					<img src="{% static 'poll/images/portada/youtube.png' %}"><a href="https://www.youtube.com/channel/UCAKbOLj46aHZFACVV1bZM8Q"> Movimiento PRP</a>
+				</div>	
+				<br>
+				<h5 class="w3-green w3-margin">¿Eres Miembro del PRP?</h5>
+
+				<div class="centrado w3-border w3-round-xlarge w3-margin w3-gray">
+			    	<br>
+			    	<form class="w3-container">
+			    		<input type="text" class="w3-input" placeholder="Usuario">
+			    		<br>
+			    		<input  class="w3-input" type="text" placeholder="Contraseña">		    		
+			    	</form>
+			    	<br>
+			    	<a href="login.html" class="btn btn-lg btn-success">Entrar</a>
+			    	<br>
+			    	<br>
+			    	<h5>¿Aun no eres Miembro?</h5>
+			    	<br>
+			    	<a href="register.html" class="btn-danger btn-lg">¡Registrate!</a>
+			    	<br>
+			    	<br>
+				</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="{% static 'poll/js/jsbootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'poll/js/jquery-3.2.0.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'poll/js/conf.js' %}"></script>
+</body>
+</html>
